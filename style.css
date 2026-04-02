@@ -1,0 +1,275 @@
+:root {
+    --navy: #2d3bb6;
+    --blue: #006eff;
+    --light-blue: #9bc3ff;
+    --yellow: #ffeb9c;
+    --white: #ffffff;
+    --gray: #f2f7ff;
+}
+
+/* Глобальні */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { 
+    font-family: 'Open Sans', sans-serif; 
+    color: var(--navy); 
+    background: var(--white); 
+    line-height: 1.6;
+}
+
+.container { max-width: 1300px; margin: 0 auto; padding: 0 30px; }
+.text-center { text-align: center; }
+.header-center { text-align: center; margin-bottom: 80px; }
+.section-desc { font-size: 1.25rem; max-width: 800px; margin: 20px auto 0; color: #444; }
+
+/* Текст */
+.label-blue { color: var(--blue); font-weight: 900; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 15px; display: block; }
+.label-yellow { color: var(--yellow); font-weight: 900; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 2px; margin-bottom: 15px; display: block; }
+.title-dark { font-family: 'Montserrat'; font-size: 3.5rem; font-weight: 900; line-height: 1.1; margin-bottom: 25px; }
+.title-white { font-family: 'Montserrat'; font-size: 3.5rem; font-weight: 900; line-height: 1.1; color: white; margin-bottom: 25px; }
+
+/* Navbar */
+.navbar {
+    background: var(--navy);
+    padding: 18px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 3000;
+    border-bottom: 3px solid var(--accent-yellow);
+}
+.flex-nav { display: flex; justify-content: space-between; align-items: center; }
+.logo { color: white; font-family: 'Montserrat'; font-weight: 900; font-size: 1.6rem; letter-spacing: 1px; }
+.logo span { color: var(--yellow); }
+.nav-links { display: flex; list-style: none; gap: 20px; }
+.nav-links a { color: white; text-decoration: none; font-weight: 700; font-size: 0.85rem; transition: 0.3s; position: relative; }
+.nav-links a::after { content: ''; position: absolute; bottom: -5px; left: 0; width: 0; height: 2px; background: var(--yellow); transition: 0.3s; }
+.nav-links a:hover::after { width: 100%; }
+.nav-cta { background: var(--yellow); color: var(--navy); padding: 10px 22px; border-radius: 5px; text-decoration: none; font-weight: 900; font-size: 0.8rem; }
+
+/* Hero */
+.hero {
+    padding: 260px 0 160px;
+    background: radial-gradient(circle at top right, var(--light-blue) 0%, var(--white) 60%);
+    text-align: center;
+}
+.hero-badge { background: var(--blue); color: white; padding: 8px 18px; border-radius: 5px; font-weight: 800; display: inline-block; margin-bottom: 30px; }
+.hero-title { font-family: 'Montserrat'; font-size: 5rem; font-weight: 900; line-height: 1; margin-bottom: 30px; }
+.vibrant { color: var(--blue); text-shadow: 4px 4px 0px var(--yellow); }
+.hero-description { font-size: 1.4rem; max-width: 900px; margin: 0 auto 50px; font-weight: 600; color: #222; line-height: 1.5; }
+.patron-footer { background: white; padding: 15px 30px; border-radius: 50px; display: inline-flex; align-items: center; gap: 15px; box-shadow: 0 10px 40px rgba(0,0,0,0.05); margin-top: 60px; }
+
+.btn-primary { background: var(--blue); color: white; padding: 22px 50px; border-radius: 100px; text-decoration: none; font-weight: 900; display: inline-block; transition: 0.3s; box-shadow: 0 8px 20px rgba(0,110,255,0.3); }
+.btn-outline { border: 3px solid var(--navy); color: var(--navy); padding: 19px 50px; border-radius: 100px; text-decoration: none; font-weight: 900; display: inline-block; margin-left: 20px; }
+.btn-primary:hover { transform: translateY(-5px) scale(1.03); }
+
+/* Stats & Evo */
+.evolution { padding: 140px 0; }
+.stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-bottom: 100px; }
+.stat-card { background: var(--navy); color: white; padding: 60px 40px; border-radius: 40px; text-align: center; }
+.stat-val { font-size: 4.5rem; font-weight: 900; color: var(--yellow); line-height: 1; margin-bottom: 10px; }
+.stat-card.highlight { background: var(--yellow); color: var(--navy); }
+.stat-card.highlight .stat-val { color: var(--navy); }
+
+.evo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+.evo-box { padding: 50px; background: var(--gray); border-radius: 35px; border-bottom: 10px solid var(--blue); transition: 0.3s; }
+.evo-box i { font-size: 3rem; color: var(--blue); margin-bottom: 25px; }
+.evo-box h4 { font-family: 'Montserrat'; font-weight: 900; margin-bottom: 20px; font-size: 1.5rem; }
+
+/* Schools */
+.schools { background: var(--navy); padding: 120px 0; }
+.schools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-top: 60px; }
+.school-item { padding: 35px; background: rgba(255,255,255,0.1); color: white; font-weight: 800; border-radius: 15px; border-left: 10px solid var(--yellow); text-align: center; transition: 0.3s; }
+.school-item:hover { background: var(--yellow); color: var(--navy); transform: scale(1.05); }
+
+/* Selection Rules */
+.rules { padding: 140px 0; background: var(--gray); }
+.rules-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px; }
+.rule-giant { background: white; padding: 70px 50px; border-radius: 50px; display: flex; gap: 35px; border: 1px solid #e1e8f0; box-shadow: 0 20px 50px rgba(0,0,0,0.03); }
+.rule-icon { font-size: 4.5rem; color: var(--blue); }
+.rule-info h4 { font-family: 'Montserrat'; font-weight: 900; font-size: 2rem; margin-bottom: 20px; }
+
+/* History Spotlight */
+.history { padding: 140px 0; }
+.history-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-top: 80px; }
+.case-card { background: white; border-radius: 50px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,12,116,0.1); border-bottom: 12px solid var(--yellow); }
+.case-img { height: 350px; background-size: cover; background-position: center; position: relative; }
+.case-badge { position: absolute; bottom: 10px; left: 52px; background: var(--yellow); color: var(--navy); padding: 8px 20px; font-weight: 900; border-radius: 5px; }
+.case-content { padding: 60px; }
+.past-mentions { text-align: center; margin-top: 100px; font-weight: 700; color: #777; font-size: 1.2rem; border-top: 1px solid #ddd; padding-top: 40px; }
+.past-mentions span { color: var(--blue); }
+
+/* JURY SECTION (FIXED 3+2 LAYOUT) */
+.jury { padding: 140px 0; background: #fafcff; }
+.jury-container { display: flex; flex-direction: column; gap: 30px; margin-top: 80px; }
+.jury-row-top { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.jury-row-bottom { display: grid; grid-template-columns: repeat(2, 400px); gap: 30px; justify-content: center; }
+.jury-card { background: white; padding: 60px 40px; border-radius: 40px; text-align: center; border: 1px solid #eee; transition: 0.3s; box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
+.jury-card i { font-size: 4rem; color: var(--blue); margin-bottom: 30px; }
+.jury-card h4 { font-family: 'Montserrat'; font-weight: 900; font-size: 1.5rem; margin-bottom: 15px; }
+.jury-card.highlight-jury { background: var(--yellow); border: none; }
+.jury-card:hover { transform: translateY(-10px); border-color: var(--blue); }
+
+/* Guide */
+.guide { padding: 140px 0; }
+.guide-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; margin-top: 80px; }
+.step-card { padding: 80px 50px; background: var(--gray); border-radius: 40px; border-bottom: 10px solid var(--blue); position: relative; }
+.step-number-box { position: absolute; top: -30px; left: 50px; width: 80px; height: 80px; background: var(--navy); color: white; display: flex; align-items: center; justify-content: center; border-radius: 20px; font-size: 2.5rem; font-weight: 900; box-shadow: 0 10px 30px rgba(0,12,116,0.3); }
+.step-card h4 { font-family: 'Montserrat'; font-weight: 900; font-size: 2rem; margin-top: 20px; margin-bottom: 20px; }
+
+.stop-box { margin-top: 120px; padding: 80px; background: #fff5f5; border-radius: 60px; border-left: 25px solid #ff4d4d; }
+.stop-box h3 { color: #cc0000; font-family: 'Montserrat'; font-weight: 900; font-size: 3rem; margin-bottom: 30px; }
+.prohibited-list { list-style: none; }
+.prohibited-list li { margin-bottom: 20px; padding-left: 40px; position: relative; font-size: 1.3rem; font-weight: 700; }
+.prohibited-list li::before { content: '✕'; position: absolute; left: 0; color: #ff4d4d; font-weight: 900; }
+
+/* Timeline */
+.timeline { background: var(--navy); padding: 140px 0; color: white; }
+.v-timeline { max-width: 800px; margin: 80px auto 0; position: relative; padding-left: 80px; }
+.t-line { position: absolute; left: 0; top: 0; width: 6px; height: 100%; background: var(--yellow); border-radius: 10px; }
+.t-item { margin-bottom: 80px; position: relative; }
+.t-dot { position: absolute; left: -97px; top: 5px; width: 40px; height: 40px; background: var(--yellow); border-radius: 50%; box-shadow: 0 0 40px var(--yellow); border: 8px solid var(--navy); }
+.t-date { font-size: 2.8rem; font-weight: 900; color: var(--yellow); display: block; margin-bottom: 10px; font-family: 'Montserrat'; }
+
+/* Footer */
+.footer { background: #00021a; padding: 140px 0 60px; color: white; }
+.footer h2 { font-size: 4.5rem; font-weight: 900; line-height: 1; margin-bottom: 50px; font-family: 'Montserrat'; }
+.footer-bottom { margin-top: 120px; padding-top: 50px; border-top: 1px solid rgba(255,255,255,0.1); }
+.socials a { color: white; font-size: 3rem; margin-right: 440px; transition: 0.3s; }
+.socials a:hover { color: var(--yellow); }
+
+/* Animations */
+.reveal { opacity: 0; transform: translateY(60px); transition: 0.5s cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+.reveal.active { opacity: 1; transform: translateY(0); }
+
+/* Mobile */
+@media (max-width: 1024px) {
+    .jury-row-top, .jury-row-bottom { grid-template-columns: 1fr; }
+    .rules-container, .history-grid { grid-template-columns: 1fr; }
+    .title-dark, .title-white { font-size: 2.8rem; }
+    .rule-giant { flex-direction: column; }
+}
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-title { font-size: 3rem; }
+    .btn-outline { margin-left: 0; margin-top: 20px; width: 100%; text-align: center; }
+    .btn-primary { width: 100%; text-align: center; }
+    .stop-box { padding: 40px; }
+}
+/* СТИЛІЗАЦІЯ КОНТРАСТНОЇ КНОПКИ В FOOTER */
+.btn-yellow.large {
+    display: inline-block;
+    background-color: #ffeb9c;    /* Насичений жовтий колір */
+    color: #000c74;               /* Темно-синій текст для максимального контрасту */
+    padding: 22px 55px;           /* Масивні відступи */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;            /* Великий розмір шрифту */
+    font-weight: 900;             /* Максимальна жирність */
+    text-decoration: none;        /* Прибрати підкреслення */
+    text-transform: uppercase;   /* Тільки великі літери */
+    letter-spacing: 1px;          /* Міжлітерний інтервал */
+    border-radius: 12px;          /* Форма "цеглинки" зі згладженими кутами */
+    
+    /* 3D ефект (бетонна тінь) */
+    border: 3px solid #000c74;    /* Темний контур для чіткості меж */
+    box-shadow: 0 10px 0px #d4bc5a; /* Жорстка тінь знизу */
+    
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Ефект при наведенні курсору */
+.btn-yellow.large:hover {
+    background-color: #fff1b5;    /* Трохи світліший фон */
+    transform: translateY(-3px);  /* Кнопка ніби піднімається */
+    box-shadow: 0 13px 0px #d4bc5a; /* Тінь збільшується */
+}
+
+/* Ефект при натисканні (кнопка "вдавлюється") */
+.btn-yellow.large:active {
+    transform: translateY(6px);   /* Зсув вниз */
+    box-shadow: 0 4px 0px #d4bc5a;  /* Тінь зменшується */
+}
+
+/* Додатково: адаптація для мобілок (щоб кнопка не була занадто великою) */
+@media (max-width: 768px) {
+    .btn-yellow.large {
+        padding: 18px 30px;
+        font-size: 1.1rem;
+        width: 90%;               /* Майже на всю ширину екрану */
+        text-align: center;
+    }
+}
+/* ПОКРАЩЕНА КОНТРАСТНІСТЬ ТАЙМЛАЙНУ */
+
+/* Стиль дати (06.04 і т.д.) */
+.t-date {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.8rem;        /* Робимо дату дуже великою */
+    font-weight: 900;         /* Максимальна жирність */
+    color: #ffeb9c;           /* Насичений жовтий */
+    line-height: 1;
+    margin-bottom: 12px;
+    letter-spacing: -1px;
+    /* Легка тінь для того, щоб шрифт "виходив" на передній план */
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2); 
+}
+
+/* Заголовок події (Презентація та Старт) */
+.t-info h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;        /* Збільшуємо шрифт */
+    font-weight: 800;
+    color: #ffffff;           /* Чистий білий для контрасту */
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Опис події (Текст під заголовком) */
+.t-info p {
+    font-size: 1.15rem;       /* Збільшуємо читабельність */
+    color: rgba(255, 255, 255, 0.9); /* Майже білий, дуже високий контраст */
+    font-weight: 400;
+    max-width: 500px;         /* Щоб текст не розтягувався занадто сильно */
+    line-height: 1.6;
+}
+
+/* Стилізація самої лінії та точок для більшої виразності */
+.t-line {
+    width: 6px !important;    /* Робимо лінію товстішою */
+    background-color: #ffeb9c !important;
+    box-shadow: 0 0 15px rgba(255, 235, 156, 0.3); /* Ефект світіння лінії */
+}
+
+.t-dot {
+    width: 32px !important;   /* Більша точка */
+    height: 32px !important;
+    background-color: #ffeb9c !important;
+    border: 6px solid #000c74 !important; /* Глибокий синій бортик */
+    box-shadow: 0 0 20px #ffeb9c; /* Яскраве світіння точки */
+    left: -93px !important;   /* Точне центрування (залежить від твого padding-left) */
+}
+
+/* Відступ між елементами списку */
+.t-item {
+    margin-bottom: 100px !important; /* Більше простору між датами */
+}
+
+/* Адаптація для мобільних пристроїв */
+@media (max-width: 768px) {
+    .t-date {
+        font-size: 2rem;
+    }
+    .t-info h4 {
+        font-size: 1.4rem;
+    }
+    .v-timeline {
+        padding-left: 50px; /* Трохи менше для вузьких екранів */
+    }
+    .t-dot {
+        left: -63px !important;
+    }
+}
