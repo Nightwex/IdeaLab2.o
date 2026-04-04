@@ -12,19 +12,25 @@
 
     <!-- НАВІГАЦІЙНЕ МЕНЮ -->
     <nav class="navbar">
-        <div class="container flex-nav">
+    <div class="container flex-nav">
+        <!-- Логотип + Спонсор -->
+        <div class="logo-wrapper">
             <div class="logo">ІДЕЯ<span>LAB</span> 2026</div>
-            <ul class="nav-links">
-                <li><a href="#about">Про проєкт</a></li>
-                <li><a href="#schools">Школи</a></li>
-                <li><a href="#rules">Правила участі</a></li>
-                <li><a href="#history">Минулі успіхи</a></li>
-                <li><a href="#guide">Інструкція</a></li>
-                <li><a href="#timeline">Графік</a></li>
-            </ul>
-            <a href="https://forms.gle/your-link" class="nav-cta">ПОДАТИ ПРОЄКТ</a>
+            <div class="nav-divider"></div> <!-- Розділювач -->
+            <img src="/materials/your-sponsor-icon.png" class="nav-sponsor-img" alt="Партнер">
         </div>
-    </nav>
+
+        <ul class="nav-links">
+            <li><a href="#about">Про проєкт</a></li>
+            <li><a href="#schools">Школи</a></li>
+            <li><a href="#rules">Правила участі</a></li>
+            <li><a href="#history">Минулі успіхи</a></li>
+            <li><a href="#guide">Інструкція</a></li>
+            <li><a href="#timeline">Графік</a></li>
+        </ul>
+        <a href="https://forms.gle/your-link" class="nav-cta">ПОДАТИ ПРОЄКТ</a>
+    </div>
+</nav>
 
     <!-- 1. HERO SECTION -->
     <header id="welcome" class="hero">
@@ -84,7 +90,7 @@
                 <div class="evo-box reveal delay-1">
                     <i class="fas fa-wallet"></i>
                     <h4>Грант 10 000 грн</h4>
-                    <p>Ми оберемо <strong>двох</strong> переможців. <strong>Кожна</strong> команда-лідер отримає по <strong>10 000 грн</strong>  на повну реалізацію своєї задумки.</p>
+                    <p>Ми оберемо <strong>двох</strong> переможців. <strong>Кожен з них отримає</strong> по <strong>10 000 грн</strong>  на повну реалізацію своєї задумки.</p>
                 </div>
                 <div class="evo-box reveal delay-2">
                     <i class="fas fa-balance-scale"></i>
@@ -142,80 +148,128 @@
 
     <!-- 5. МИНУЛОРІЧНІ УСПІХИ (SPOTLIGHT) -->
     <section id="history" class="history">
-        <div class="container">
-            <div class="header-center reveal">
-                <h2 class="label-blue">Наше портфоліо</h2>
-                <h3 class="title-dark">Створені учнівські проєкти </h3>
-            </div>
-
-            <div class="history-grid">
-                <article class="case-card reveal">
-                    <div class="case-img lunge"></div>
-                    <div class="case-content">
-                        <span class="case-badge">Писарівка</span>
-                        <h3>Lounge Zone</h3>
-                        <p>Учні створили справжній простір для психологічного розвантаження. Тепер замість порожнього коридору — зона з м'якими кріслами-мішками та стильним дизайном для відпочинку.</p>
-                    </div>
-                </article>
-                <article class="case-card reveal delay-1">
-                    <div class="case-img skillup"></div>
-                    <div class="case-content">
-                        <span class="case-badge">Хутори</span>
-                        <h3>Skill Up</h3>
-                        <p>Територія розвитку. Проєкт включав закупівлю гри "Світ громад", воркшопи з комунікації та організацію куточка для інтелектуального дозвілля та тренінгів.</p>
-                    </div>
-                </article>
-            </div>
-            <div class="past-mentions reveal">
-                <p>Також реалізовано: <span>Тенісна зона (Щітки)</span> • <span>Велопарковка</span> • <span>Сучасна велостоянка</span></p>
-            </div>
+    <div class="container">
+        <div class="header-center reveal">
+            <h2 class="label-blue">Наше портфоліо</h2>
+            <h3 class="title-dark">Реалізовані мрії</h3>
+            <p class="section-desc">Подивіться, як ідеї учнів минулого року перетворилися на реальні об'єкти в ліцеях нашого округу.</p>
         </div>
-    </section>
 
-    <!-- 6. ЖУРІ (3 В ОДНОМУ РЯДУ, 2 В ДРУГОМУ) -->
-    <section id="jury" class="jury">
-        <div class="container">
-            <div class="header-center reveal">
-                <h2 class="label-blue">Хто оцінює?</h2>
-                <h3 class="title-dark">Члени журі 2026</h3>
-                <p class="jury-intro">Команда експертів, яка визначає та відбирає один з проєктів для реалізації.</p>
-            </div>
-
-            <div class="jury-container reveal">
-                <!-- ПЕРШИЙ РЯД: 3 ЛЮДИНИ -->
-                <div class="jury-row-top">
-                    <div class="jury-card">
-                        <i class="fas fa-user-tie"></i>
-                        <h4>В. Кривешко</h4>
-                        <p>Староста округу. Головний куратор і гарант фінансування.</p>
+        <!-- Carousel Wrapper -->
+        <div class="carousel-container reveal">
+            <div class="carousel-viewport">
+                <div class="carousel-track">
+                    <!-- Слайд 1 -->
+                    <div class="carousel-slide">
+                        <img src="/materials/carusel1.png" alt="Проєкт 1">
+                        <div class="slide-caption">Велостоянка - Вінницько-Хутірський ліцей</div>
                     </div>
-                    <div class="jury-card">
-                        <i class="fas fa-graduation-cap"></i>
-                        <h4>Мая Андріївна</h4>
-                        <p>Освітній сектор. Оцінює користь проєкту для навчання учнів.</p>
+                    <!-- Слайд 2 -->
+                    <div class="carousel-slide">
+                        <img src="/materials/carusel2.png" alt="Проєкт 2">
+                        <div class="slide-caption">Тенісна зона - Щітецька гімназія</div>
                     </div>
-                    <div class="jury-card">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                        <h4>Ганна Федорівна</h4>
-                        <p>Експертний супровід. Перевірка реалістичності ваших бюджетів.</p>
+                    <!-- Слайд 3 -->
+                    <div class="carousel-slide">
+                        <img src="/materials/carusel3.png" alt="Проєкт 3">
+                        <div class="slide-caption">Лаунж-простір - Писарівський ліцей</div>
                     </div>
-                </div>
-                <!-- ДРУГИЙ РЯД: 2 ЛЮДИНИ -->
-                <div class="jury-row-bottom">
-                    <div class="jury-card">
-                        <i class="fas fa-university"></i>
-                        <h4>Представники</h4>
-                        <p>Стадниця & Крушлинці. Куратори нових закладів у сезоні 2.0.</p>
+                    <!-- Слайд 4 -->
+                    <div class="carousel-slide">
+                        <img src="/materials/carusel4.png" alt="Проєкт 4">
+                        <div class="slide-caption">Велопарковка - Писарівський ліцей</div>
                     </div>
-                    <div class="jury-card ">
-                        <i class="fas fa-star"></i>
-                        <h4>Соня Рощук</h4>
-                        <p>Молодіжна Рада. Представляє інтереси та голос молоді округу.</p>
+                    <!-- Слайд 5 -->
+                    <div class="carousel-slide">
+                        <img src="/materials/carusel5.png" alt="Проєкт 5">
+                        <div class="slide-caption">Skill up - Вінницько-Хутірський ліцей</div>
                     </div>
                 </div>
             </div>
+
+            <!-- Навігація каруселі -->
+            <button class="carousel-btn prev" aria-label="Назад"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next" aria-label="Вперед"><i class="fas fa-chevron-right"></i></button>
+            
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
-    </section>
+
+        <div class="past-mentions reveal">
+            <p>Проєкти "Skill up" та "Lounge Zone" були обрані голосуванням та стали реальністю завдяки активності молоді та підтримці ІдеяLab.</p>
+        </div>
+    </div>
+</section>
+
+<!-- 6. ЖУРІ (СХЕМА 3 + 3 + 2) -->
+<section id="jury" class="jury">
+    <div class="container">
+        <div class="header-center reveal">
+            <h2 class="label-blue">Хто оцінює?</h2>
+            <h3 class="title-dark">Члени журі 2026</h3>
+            <p class="jury-intro">Команда експертів, яка визначає та відбирає кращі проєкти для реалізації.</p>
+        </div>
+
+        <div class="jury-wrapper reveal">
+            <!-- ПЕРШИЙ РЯД: 3 ЛЮДИНИ -->
+            <div class="jury-row">
+                <div class="jury-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Кривешко Владислав </h4>
+                    <p>Староста Вінницько-Хутірського старостинського округу.</p>
+                </div>
+                <div class="jury-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Науменко Дмитро </h4>
+                    <p>Депутат Вінницької міської ради</p>
+                </div>
+                <div class="jury-card">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Віктор Мацера</h4>
+                    <p>Депутат Вінницької міської ради.</p>
+                </div>
+            </div>
+
+            <!-- ДРУГИЙ РЯД: 3 ЛЮДИНИ -->
+            <div class="jury-row">
+                <div class="jury-card">
+                    <i class="fas fa-users-cog"></i>
+                    <h4>Мришук Ганна</h4>
+                    <p>Заступниця старости Вінницько-Хутірського старостинського округу.</p>
+                </div>
+                <div class="jury-card">
+                    <i class="fas fa-users-cog"></i>
+                    <h4>Власюк Майя</h4>
+                    <p>Заступниця старости Вінницько-Хутірського старостинського округу.</p>
+                </div>
+                <div class="jury-card">
+                    <i class="fas fa-star"></i>
+                    <h4>Рощук Софія</h4>
+                    <p>Радниця з питань молодіжіної політики Вінницько-Хутірського старостинського округу.</p>
+                </div>
+            </div>
+
+            <!-- ТРЕТІЙ РЯД: 2 ЛЮДИНИ (ПО ЦЕНТРУ) -->
+            <div class="jury-row jury-row-last">
+                <div class="jury-card jury-row-last">
+                    <i class="fas fa-users-cog"></i>
+                    <h4>Паламарчук Ольга</h4>
+                    <p>Заступниця старости Стадницького старостинського округу.</p>
+                </div>
+                <div class="jury-card jury-row-last">
+                    <i class="fas fa-users-cog"></i>
+                    <h4>Круцюк Раїса</h4>
+                    <p>Заступниця старости Стадницького старостинського округу.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- 7. ІНСТРУКЦІЯ ТА ОБМЕЖЕННЯ -->
     <section id="guide" class="guide">
@@ -239,7 +293,7 @@
                 <div class="step-card reveal delay-2">
                     <div class="step-number-box">03</div>
                     <h4>Порахуй Бюджет</h4>
-                    <p>Заповніть <strong>форму</strong>, яку ми надамо, <strong>дотримуючись вимог</strong>: використовуйте тільки ціни <strong>офіційних </strong>магазинів (Епіцентр, Rozetka).</p>
+                    <p>Заповніть <strong>форму</strong>, яку ми надамо, <strong>дотримуючись вимог</strong>: використовуйте тільки ціни <strong>офіційних </strong>магазинів (Епіцентр, Rozetka і т.д.).</p>
                 </div>
             </div>
 
@@ -253,6 +307,175 @@
             </div>
         </div>
     </section>
+<!-- 10. ДЕТАЛЬНА ІНСТРУКЦІЯ ТА ЗРАЗКИ -->
+<section id="detailed-instructions" class="detailed-guide">
+    <div class="container">
+        <div class="header-center reveal">
+            <h2 class="label-blue">Майстер-клас</h2>
+            <h3 class="title-dark">Як зробити проєкт ідеальним</h3>
+            <p class="section-desc">Скористайтеся цими підказками, щоб правильно заповнити кожен пункт анкети та бюджету.</p>
+        </div>
+
+        <!-- БЛОК 1: Проблема та Актуальність -->
+        <div class="guide-row reveal">
+            <div class="logic-card">
+                <div class="card-head yellow-bg">1. ПРОБЛЕМА</div>
+                <ul class="logic-list">
+                    <li>Одне <strong>чітко</strong> сформульоване речення:</li>
+                    <li>"Недостатня залученість..."</li>
+                    <li>"Низький рівень обізнаності..."</li>
+                    <li>"Обмежений доступ до ресурсів..."</li>
+                </ul>
+            </div>
+            <div class="logic-arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+            <div class="logic-card">
+                <div class="card-head blue-bg">АКТУАЛЬНІСТЬ (ЧОМУ ЦЕ ВАЖЛИВО?)</div>
+                <p class="card-p">Ви маєте зазначити ЧОМУ вирішення цієї проблеми є важливим наразі та описати існуючий стан речей щодо вашої проблеми. </p>
+                <p class="card-p">“На сьогодні проблема X є актуальною оскільки ...Відсутність X призводить до ...”
+                    <br>
+“Рівень X у нашому ліцеї є недостатнім , що впливає на якість X”</p>
+            </div>
+        </div>
+
+        <!-- БЛОК 2: Рішення та Опис -->
+        <div class="guide-row reveal">
+            <div class="logic-card">
+                <div class="card-head yellow-bg">2. ЯК ЦЕ ВИРІШИТЬ ПРОБЛЕМУ?</div>
+                <p class="card-p">Як ваш проєкт повпливає на обрану проблему та чому буде сприяти.<br>
+                    "Запропонований проєкт передбачає створення або покращення простору, що сприятиме..."
+                <br>"Наш проєкт спрямований на організацію ..., що допоможе ... Це дозволить підвищити якість ..."<br>
+                "Впровадження Х ініціатив із Х допоможе змінити ставлення щодо ...Це забезпечить ....” та інші."</p>  
+            </div>
+            <div class="logic-arrow"><i class="fas fa-long-arrow-alt-right"></i></div>
+            <div class="logic-card">
+                <div class="card-head blue-bg">КОРОТКИЙ ОПИС ПРОЄКТУ</div>
+                <p class="card-p">Зміст не має обмежуватись лише закупівлею.<br> “У рамках проєкту буде створено/обладнано”<br>
+
+“Буде організовано серію заходів/інформаційну кампанію”
+
+“У нашому проєкті ми плануємо встановити/реорганізувати/провести”</p>
+            </div>
+        </div>
+
+<div class="implementation-sample reveal">
+    <div class="sample-header">
+        <div class="badge-sample">ЗРАЗОК</div>
+        <h3>3. План реалізації проєкту</h3>
+    </div>
+    
+    <div class="sample-container">
+        <!-- Ліва частина: Пояснення -->
+        <div class="sample-sidebar">
+            <i class="fas fa-info-circle"></i>
+            <p>Пам’ятайте, це лише <strong>ПРИКЛАД</strong>. Ваша кількість етапів (від 3 до 8), їх зміст та розподіл часу повинні відповідати саме вашій ідеї.</p>
+            <div class="deadline-tag">Кінцевий термін реалізації: <strong>12 червня</strong></div>
+        </div>
+
+        <!-- Права частина: Етапи -->
+        <div class="sample-content">
+            <div class="sample-step">
+                <div class="step-label">Етап 1: Підготовчий</div>
+                <div class="step-dates">13 – 16 травня</div>
+                <p>Розробка детального дизайну, аналіз потреб, визначення точних локацій у школі, проведення фінального опитування серед учнів.</p>
+            </div>
+
+            <div class="sample-step">
+                <div class="step-label">Етап 2: Основний (Закупівля та монтаж)</div>
+                <div class="step-dates">17 – 20 травня</div>
+                <p>Закупівля матеріалів за кошторисом, доставка, установка обладнання, організація простору, залучення волонтерів-учнів до робіт.</p>
+            </div>
+
+            <div class="sample-step">
+                <div class="step-label">Етап X: Аналіз та підсумки</div>
+                <div class="step-dates">21 – 23 травня</div>
+                <p>Проведення спостережень щодо дієвості проєкту, збір відгуків, оцінка та порівняння досягнутого результату з очікуваним.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- БЛОК 4: Бюджет (Таблиця та Помилки) -->
+        <div class="budget-info-box reveal">
+            <div class="header-center">
+                <h3 class="title-dark">4. Робота з бюджетом</h3>
+            </div>
+            <div class="table-container">
+                <table class="budget-sample">
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Назва товару</th>
+                            <th>Посилання</th>
+                            <th>К-ть</th>
+                            <th>Ціна/грн</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Цемент BauGut 25кг</td>
+                            <td><a href="#">epicentrk.ua/...</a></td>
+                            <td>3</td>
+                            <td>450.0</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>М'яч волейбольний</td>
+                            <td><a href="#">superliga.com/...</a></td>
+                            <td>2</td>
+                            <td>5518.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="mistakes-grid">
+                <div class="mistake-item">
+                    <h5><i class="fas fa-times-circle"></i> Постачальники</h5>
+                    <p>Тільки офіційні сайти. Жодного ринку, OLX чи "з рук". Нам потрібні чеки для звітності.</p>
+                </div>
+                <div class="mistake-item">
+                    <h5><i class="fas fa-tag"></i> Ціна та знижки</h5>
+                    <p>Вказуйте ПОВНУ ціну. Не розраховуйте на акції, які можуть закінчитись завтра.</p>
+                </div>
+                <div class="mistake-item">
+                    <h5><i class="fas fa-truck-loading"></i> Доставка</h5>
+                    <p>Не забудьте врахувати вартість доставки та послуги з монтажу/встановлення.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- БЛОК 5: Процес подачі бюджету (Лінія-стрілочка) -->
+        <div class="budget-flow-section reveal">
+            <h3 class="title-dark text-center">5. Як додати файл бюджету?</h3>
+            <div class="flow-container">
+                <div class="flow-line"></div>
+                <div class="flow-steps">
+                    <div class="flow-step">
+                        <div class="step-circle">1</div>
+                        <p>Знайдіть посилання на <strong>"ФАЙЛ БЮДЖЕТ"</strong> в анкеті</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-circle">2</div>
+                        <p>Отримайте шаблон та <strong>Завантажте</strong> його на пристрій</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-circle">3</div>
+                        <p><strong>Заповніть</strong> дані відповідно до вашого проєкту</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-circle">4</div>
+                        <p>Збережіть файл та натисніть <strong>"Додати файл"</strong> у формі</p>
+                    </div>
+                    <div class="flow-step active-step">
+                        <div class="step-circle"><i class="fas fa-check"></i></div>
+                        <p>Готово! Вашу заявку прийнято на розгляд</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- 8. ТАЙМЛАЙН -->
     <section id="timeline" class="timeline">
@@ -315,21 +538,85 @@
             </div>
         </div>
     </section>
+<!-- 9. МЕДІА ТА ПІДТРИМКА -->
+<section id="media" class="media-section">
+    <div class="container">
+        <div class="header-center reveal">
+            <h2 class="label-blue">Про нас говорять</h2>
+            <h3 class="title-dark">Медіа та ресурси проєкту</h3>
+            <p class="section-desc">Дізнайтеся більше про історію «ІдеяLab 1.0» з офіційних джерел та репортажів телеканалів.</p>
+        </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container text-center reveal">
-            <h2>Створи зміни власноруч прямо зараз!</h2>
-            <a href="https://forms.gle/your-link" class="btn-yellow large">ЗАПОВНИТИ АНКЕТУ ЗАРАЗ</a>
-            <div class="footer-bottom flex-nav">
-                <div class="logo">ІДЕЯ<span>LAB</span></div>
-                <div class="socials">
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-                <p>&copy; 2026 Молодіжна Рада при старості. Громада, що діє! 67</p>
+        <div class="media-grid reveal">
+            <!-- Телеканал Вінниччина -->
+            <div class="media-card">
+                <div class="media-icon"><i class="fas fa-tv"></i></div>
+                <h4>Репортаж телеканалу "Вінниччина"</h4>
+                <p>Стартував освітній проєкт «ІдеяLab» у Вінницько-Хутірському старостинському окрузі. </p>
+                <a href="https://youtu.be/-cX__Sqwnz8?si=iiZxOGLFti0ed8IG" class="media-link">Дивитись випуск <i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <!-- Телеканал ВІТА -->
+            <div class="media-card">
+                <div class="media-icon"><i class="fas fa-video"></i></div>
+                <h4>Репортаж телеканалу "Вінниччина"</h4>
+                <p>По 5000 на РЕАЛІЗАЦІЮ ІДЕЙ учнів: у Вінницьких Хуторах пройшов конкурс шкільних ініціатив "ІдеяLab"</p>
+                <a href="https://youtu.be/kigKcGzDu6E?si=uXSRiIZ7Kr39NoIG" class="media-link">Дивитись репортаж <i class="fas fa-external-link-alt"></i></a>
+            </div>
+
+            <!-- Міська рада -->
+            <div class="media-card">
+                <div class="media-icon"><i class="fas fa-newspaper"></i></div>
+                <h4>Пост міської ради</h4>
+                <p>Офіційна публікація про підтримку молодіжних проєктів громади.</p>
+                <a href="https://www.instagram.com/p/DJqyHDdsRb-/?igsh=MWwzaGRxam01Zzg5NQ==" class="media-link">Читати пост <i class="fas fa-external-link-alt"></i></a>
             </div>
         </div>
-    </footer>
+
+        <!-- БЛОК ПІДТРИМКИ (ЗВ'ЯЗОК) -->
+        <div class="support-box reveal">
+            <div class="support-content">
+                <div class="support-text">
+                    <h3>Маєш питання щодо анкети чи бюджету?</h3>
+                    <p>Звертайся до нашої фасилітаторки — ми допоможемо тобі зробити проєкт ідеальним!</p>
+                </div>
+                <div class="support-contacts">
+                    <a href="https://www.instagram.com/sinnbery/" target="_blank" class="contact-btn insta">
+                        <i class="fab fa-instagram"></i> Instagram
+                    </a>
+                    <a href="https://t.me/sinnbery" target="_blank" class="contact-btn tg">
+                        <i class="fab fa-telegram-plane"></i> Telegram
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- FOOTER -->
+<footer class="footer">
+    <div class="container text-center reveal">
+        <h2>Створи зміни власноруч прямо зараз!</h2>
+        <a href="https://forms.gle/your-link" class="btn-yellow large">ЗАПОВНИТИ АНКЕТУ</a>
+
+        <div class="footer-bottom flex-nav">
+            <!-- Блок з Логотипами -->
+            <div class="footer-logo-block">
+                <div class="logo">ІДЕЯ<span>LAB</span></div>
+                <div class="nav-divider"></div>
+                <img src="/materials/your-sponsor-icon.png" class="footer-sponsor-img" alt="Спонсор">
+            </div>
+
+            <!-- Соцмережі -->
+            <div class="socials">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+
+            <!-- Копірайт -->
+            <p class="footer-copy-text">&copy; 2026 Молодіжна Рада при старості. Громада, що діє!</p>
+        </div>
+    </div>
+</footer>
 
     <script src="script.js"></script>
 </body>
