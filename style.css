@@ -30,7 +30,7 @@ body {
 
 /* Navbar */
 .navbar {
-    background: var(--navy);
+    background: #225abc;
     padding: 18px 0;
     position: fixed;
     width: 100%;
