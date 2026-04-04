@@ -59,3 +59,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+// --- CAROUSEL LOGIC ---
+const track = document.querySelector('.carousel-track');
+const slides = Array.from(document.querySelectorAll('.carousel-slide'));
+const nextBtn = document.querySelector('.carousel-btn.next');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const dots = Array.from(document.querySelectorAll('.dot'));
+
+let currentIndex = 0;
+
+const updateCarousel = (index) => {
+    // Рух стрічки
+    track.style.transform = `translateX(-${index * 100}%)`;
+    
+    // Оновлення активної крапки
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+    
+    currentIndex = index;
+};
+
+// Подія для кнопки "Вперед"
+nextBtn.addEventListener('click', () => {
+    let index = currentIndex + 1;
+    if (index >= slides.length) index = 0; // Зациклення
+    updateCarousel(index);
+});
+
+// Подія для кнопки "Назад"
+prevBtn.addEventListener('click', () => {
+    let index = currentIndex - 1;
+    if (index < 0) index = slides.length - 1; // Зациклення
+    updateCarousel(index);
+});
+
+// Подія для натискання на крапки
+dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => updateCarousel(i));
+});
