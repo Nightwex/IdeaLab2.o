@@ -1074,3 +1074,11 @@ body {
         justify-content: center;
     }
 }
+.nav-sponsor-img {
+    height: 45px; /* Оптимальна висота */
+    width: auto;
+    border-radius: 8px; /* М'які кути */
+    padding: 4px;
+    background: rgba(255, 255, 255, 0.05); /* Ледь помітна підкладка */
+    transition: 0.3s ease;
+}
