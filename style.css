@@ -109,29 +109,27 @@ body {
 .jury-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 30px; /* Відступ між рядами */
+    gap: 40px; /* Відступ між рядами */
     margin-top: 60px;
 }
 
 .jury-row {
     display: flex;
-    justify-content: center; /* Центрує картки в ряду */
-    gap: 30px; /* Відступ між картками */
+    justify-content: center; /* Центрує картки, якщо їх менше 3-х */
+    gap: 30px;
     flex-wrap: wrap;
 }
 
 .jury-card {
-    flex: 0 1 calc(33.333% - 20px); /* Розрахунок для 3-х в ряд */
-    min-width: 300px;
-    background: var(--gray);
-    padding: 50px 35px;
-    border-radius: 40px;
+    flex: 0 1 calc(33.333% - 30px); /* 3 в ряд */
+    min-width: 320px;
+    background: #ffffff;
+    padding: 40px 25px;
+    border-radius: 30px;
     text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 12, 116, 0.05);
     border: 1px solid #eee;
     transition: all 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .jury-card i {
@@ -143,13 +141,13 @@ body {
 .jury-card h4 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    font-size: 1.4rem;
-    margin-bottom: 15px;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
     color: var(--navy);
 }
 
 .jury-card p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #555;
     line-height: 1.5;
 }
@@ -167,25 +165,29 @@ body {
 .jury-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(0, 12, 116, 0.1);
-    background: white;
+    border-color: var(--blue);
 }
 
 /* Адаптація для планшетів та телефонів */
 @media (max-width: 1100px) {
     .jury-card {
-        flex: 0 1 calc(50% - 20px); /* 2 в ряд на планшетах */
+        flex: 0 1 calc(50% - 30px); /* 2 в ряд на планшетах */
     }
 }
 
 @media (max-width: 768px) {
     .jury-card {
-        flex: 0 1 100%; /* 1 в ряд на телефонах */
+        flex: 0 1 100%; /* 1 в ряд на смартфонах */
         min-width: 100%;
+        padding: 30px 20px;
     }
-    .jury-row {
-        gap: 20px;
+    
+    .jury-photo {
+        width: 120px;
+        height: 120px;
     }
-}   
+}
+
 
 /* Guide */
 .guide { padding: 140px 0; }
@@ -1193,4 +1195,49 @@ body {
     .footer h2 { font-size: 2.2rem !important; }
     .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
     .socials { margin-right: 0 !important; }
+}
+
+.jury-photo {
+    width: 140px;      /* Розмір фото */
+    height: 140px;
+    margin: 0 auto 25px;
+    border-radius: 50%; /* Кругла форма */
+    overflow: hidden;
+    border: 4px solid var(--light-blue);
+    box-shadow: 0 5px 15px rgba(0, 110, 250, 0.2);
+}
+
+.jury-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* КЛЮЧОВЕ: обрізає фото під розмір без розтягування */
+    display: block;
+}
+
+
+/* Додатковий стиль для картки-замінника */
+.jury-icon-placeholder {
+    background-color: var(--gray); /* Світлий фон як у карток */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue); /* Синій колір іконки */
+    font-size: 3.5rem;   /* Розмір іконки */
+    border: 4px solid var(--light-blue);
+}
+
+/* Вирівнювання: тепер у нас 3 ряди по 3 картки */
+.jury-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 30px; /* Відступ між рядами */
+}
+
+/* Останній ряд на мобілках теж має бути рівним */
+@media (max-width: 1024px) {
+    .jury-row {
+        margin-bottom: 0;
+    }
 }
