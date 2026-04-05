@@ -15,6 +15,7 @@ body {
     color: var(--navy); 
     background: var(--white); 
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container { max-width: 1300px; margin: 0 auto; padding: 0 30px; }
@@ -211,7 +212,12 @@ body {
 .footer { background: #071078; padding: 140px 0 60px; color: white; }
 .footer h2 { font-size: 4.5rem; font-weight: 900; line-height: 1; margin-bottom: 50px; font-family: 'Montserrat'; }
 .footer-bottom { margin-top: 120px; padding-top: 50px; border-top: 1px solid rgba(255,255,255,0.1); }
-.socials a { color: white; font-size: 3rem; margin-right: 460px; transition: 0.3s; }
+.socials a { 
+    color: white; 
+    font-size: 2.5rem; 
+    margin: 0 10px; /* Однаковий невеликий відступ з обох боків */
+    transition: 0.3s; 
+}
 .socials a:hover { color: var(--yellow); }
 
 /* Animations */
@@ -220,7 +226,14 @@ body {
 
 /* Mobile */
 @media (max-width: 1024px) {
-    .jury-row-top, .jury-row-bottom { grid-template-columns: 1fr; }
+    .jury-row-top, .jury-row-bottom { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    justify-content: center; 
+    gap: 30px; 
+    max-width: 900px; /* Обмежуємо загальну ширину ряду */
+    margin: 0 auto;   /* Центруємо весь ряд */
+}
     .rules-container, .history-grid { grid-template-columns: 1fr; }
     .title-dark, .title-white { font-size: 2.8rem; }
     .rule-giant { flex-direction: column; }
@@ -467,7 +480,7 @@ body {
 /* --- MEDIA & SUPPORT SECTION --- */
 .media-section {
     padding: 140px 0;
-    background-color: var(--gray);
+    background-color: #0ecfff;
 }
 
 .media-grid {
@@ -1079,4 +1092,105 @@ body {
     width: auto;
     background: rgba(255, 255, 255, 0.05); /* Ледь помітна підкладка */
     transition: 0.3s ease;
+}
+
+/* СТИЛЬ ДЛЯ КОНКРЕТНОГО АКЦЕНТНОГО БЛОКУ */
+.media-card-accent {
+    background-color: #071078 !important; /* Насичений темно-синій фон */
+    border-color: #0074fa !important;    /* Яскравіша рамка */
+}
+
+/* Колір тексту в цьому блоці */
+.media-card-accent h4 {
+    color: #ffeb9c !important; /* Жовтий заголовок для контрасту */
+}
+
+.media-card-accent p {
+    color: #ffffff !important; /* Білий опис */
+}
+
+/* Колір іконки в цьому блоці */
+.media-card-accent .media-icon {
+    background-color: #ffeb9c !important; /* Жовта підкладка іконки */
+    color: #071078 !important;            /* Синій колір самої іконки */
+}
+
+/* Колір кнопки в цьому блоці */
+.media-card-accent .media-link {
+    background-color: #ffeb9c !important; /* Жовта кнопка */
+    color: #071078 !important;            /* Темний текст на кнопці */
+    box-shadow: 0 4px 0px #d4bc5a;        /* 3D тінь для кнопки */
+}
+
+.media-card-accent .media-link:hover {
+    background-color: #ffffff !important;
+    color: #071078 !important;
+}
+@media (max-width: 768px) {
+    /* Забороняємо вилазити за межі екрану */
+    .container {
+        padding: 0 20px !important;
+        width: 100% !important;
+        overflow: hidden;
+    }
+
+    /* Навігація */
+    .nav-links { display: none; }
+    
+    /* Hero секція (Фото 2) */
+    .hero { padding: 140px 0 80px !important; }
+    .hero-title { font-size: 2.4rem !important; line-height: 1.1 !important; }
+    .hero-description { font-size: 1.1rem !important; line-height: 1.6 !important; }
+    .btn-outline { margin-left: 0; margin-top: 15px; width: 100%; text-align: center; }
+    .btn-primary { width: 100%; text-align: center; }
+    .patron-footer { padding: 15px 20px !important; font-size: 0.9rem !important; width: 100%; }
+
+    /* Статистика та еволюція */
+    .title-dark, .title-white { font-size: 2.2rem !important; }
+    .stat-val { font-size: 3rem !important; }
+    .evo-box { padding: 30px !important; }
+
+    /* Правила та Кейси */
+    .rule-giant { flex-direction: column; padding: 30px !important; gap: 20px; }
+    .rule-icon { font-size: 3rem; }
+    .history-grid { grid-template-columns: 1fr !important; }
+    .case-content { padding: 30px !important; }
+
+    /* Журі (Фото 1 - щоб не було пустих місць) */
+    .jury-row-top, .jury-row-bottom { 
+        grid-template-columns: 1fr !important; 
+        width: 100% !important;
+    }
+    .jury-card { width: 100% !important; padding: 30px !important; }
+
+    /* Інструкція та Блок ЗАБОРОНЕНО (Фото 3 - виправлення наїзду тексту) */
+    .step-card { padding: 60px 25px 30px !important; }
+    .step-number-box { left: 50%; transform: translateX(-50%); top: -30px; width: 60px; height: 60px; font-size: 1.8rem; }
+    
+    .stop-box {
+        padding: 30px 15px !important; /* Мінімальні відступи, щоб було місце тексту */
+        margin-top: 50px !important; 
+        width: 100% !important;
+        border-left-width: 10px !important;
+        overflow: hidden; /* Щоб нічого не стирчало */
+    }
+    .stop-box h3 { font-size: 1.6rem !important; }
+    .prohibited-list li {
+        font-size: 0.95rem !important; /* Трішки менший шрифт для мобілок */
+        word-wrap: break-word; /* Дозволяє переносити довгі слова */
+        padding-left: 20px !important;
+    }
+
+    /* Таблиця бюджету (щоб не розпирала екран) */
+    .table-container {
+        overflow-x: auto;
+        display: block;
+        width: 100%;
+    }
+    .budget-sample { min-width: 450px; }
+
+    /* Footer */
+    .footer h2 { font-size: 2.2rem !important; }
+    .footer-bottom { flex-direction: column; gap: 20px; text-align: center; }
+    .socials { margin-right: 0 !important; }
 }
