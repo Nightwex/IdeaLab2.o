@@ -77,11 +77,49 @@ body {
 .evo-box i { font-size: 3rem; color: var(--blue); margin-bottom: 25px; }
 .evo-box h4 { font-family: 'Montserrat'; font-weight: 900; margin-bottom: 20px; font-size: 1.5rem; }
 
-/* Schools */
-.schools { background: var(--navy); padding: 120px 0; }
-.schools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-top: 60px; }
-.school-item { padding: 35px; background: rgba(255,255,255,0.1); color: white; font-weight: 800; border-radius: 15px; border-left: 10px solid var(--yellow); text-align: center; transition: 0.3s; }
-.school-item:hover { background: var(--yellow); color: var(--navy); transform: scale(1.05); }
+.schools { 
+    background: var(--navy); 
+    padding: 120px 0; 
+}
+
+.schools-grid { 
+    /* Змінюємо grid на flex */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; /* Це вирівняє 7-му школу по центру */
+    gap: 20px; 
+    margin-top: 60px; 
+}
+
+.school-item { 
+    /* flex-grow: 1 (як 1fr), flex-shrink: 1, flex-basis: 320px (як твій minmax) */
+    flex: 1 1 320px; 
+    max-width: 400px; /* Додаємо обмеження, щоб 7-ма школа не розтягнулася на весь екран */
+    
+    padding: 35px; 
+    background: rgba(255,255,255,0.1); 
+    color: white; 
+    font-weight: 800; 
+    border-radius: 15px; 
+    border-left: 10px solid var(--yellow); 
+    text-align: center; 
+    transition: 0.3s; 
+}
+
+.school-item:hover { 
+    background: var(--yellow); 
+    color: var(--navy); 
+    transform: scale(1.05); 
+}
+
+/* Адаптація для маленьких телефонів (менше 360px), щоб текст не вилазив */
+@media (max-width: 380px) {
+    .school-item {
+        flex: 1 1 100%;
+        min-width: unset;
+        padding: 25px 15px;
+    }
+}
 
 /* Selection Rules */
 .rules { padding: 140px 0; background: var(--gray); }
